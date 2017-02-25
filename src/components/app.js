@@ -3,8 +3,8 @@ angular.module('video-player', [])
 .controller('AppController', function($scope) {
   $scope.videos = window.exampleVideoData; // this is array
   $scope.currentVideo = window.exampleVideoData[0];
-  $scope.currentUrl ='https://www.youtube.com/embed/' + $scope.currentVideo.id.videoId;
-  $scope.clickVideo = function(video) {$scope.currentVideo = video;}; // pass in video
+  $scope.currentUrl = 'https://www.youtube.com/embed/' + $scope.currentVideo.id.videoId;
+  $scope.clickVideo = function(video) { $scope.currentVideo = video; }; // pass in video
 
 })
 
