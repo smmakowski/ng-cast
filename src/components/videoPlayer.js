@@ -6,7 +6,10 @@ angular.module('video-player')
       video: '<'
     },
     controllerAs: 'ctrl',
-    // bindToController: true,
+    bindToController: true,
+    controller: function($scope) {
+      console.log($scope);
+    },
     templateUrl: 'src/templates/videoPlayer.html'
   };
 });
