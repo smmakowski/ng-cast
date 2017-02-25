@@ -1,14 +1,21 @@
 angular.module('video-player', [])
 
 .controller('AppController', function($scope) {
-  $scope.videos = window.exampleVideoData; // this is array
-  $scope.currentVideo = window.exampleVideoData[0];
-  $scope.clickVideo = function(video) { $scope.currentVideo = video; }; // pass in video
-
+  this.videos = window.exampleVideoData; // this is array
+  this.currentVideo = window.exampleVideoData[0];
+  this.selectVideo = function(video) { this.currentVideo = video; }; // pass in video
+  this.searchResults = function(results) {
+    //do something
+  }
 })
 
 .directive('app', function() {
   return {
+    scope: {},
+    restrict: 'E',
+    controller: 'AppController',
+    controllerAs: 'ctrl',
+    bindToController: true,
     // controllerAs: 'props',
     // bindToController: true,
     // controller: function($scope) {
