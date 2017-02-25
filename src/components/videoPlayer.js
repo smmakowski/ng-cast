@@ -2,6 +2,11 @@ angular.module('video-player')
 
 .directive('videoPlayer', function() {
   return {
-    // TODO
+    scope: {
+      video: '<'
+    },
+    controllerAs: 'ctrl',
+    // bindToController: true,
+    templateUrl: 'src/templates/videoPlayer.html'
   };
 });
