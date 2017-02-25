@@ -3,7 +3,7 @@ angular.module('video-player', [])
 .controller('AppController', function($scope) {
   $scope.videos = window.exampleVideoData; // this is array
   $scope.currentVideo = window.exampleVideoData[0];
-  $scope.clickVideo = function(video) { console.log('bleh'); }; // pass in video
+  $scope.clickVideo = function(video) { $scope.currentVideo = video;}; // pass in video
 
 })
 
