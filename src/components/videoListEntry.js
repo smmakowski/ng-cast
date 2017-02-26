@@ -5,6 +5,7 @@ angular.module('video-player')
       video: '<',
       onClick: '<'
     },
+    // restrict: 'E',
     controllerAs: 'ctrl',
     bindToController: true,
     controller: function($scope) {

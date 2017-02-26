@@ -3,16 +3,24 @@ angular.module('video-player', [])
 .controller('AppController', function($scope) {
   this.videos = window.exampleVideoData; // this is array
   this.currentVideo = window.exampleVideoData[0];
-  this.selectVideo = function(video) { this.currentVideo = video; }; // pass in video
+  console.log(this.currentVideo, 'tryyyy');
+
+  this.selectVideo = function(video) {
+    console.log(this);
+    this.currentVideo = video;
+    console.log(this);
+    console.log(this.currentVideo, '!!!!!');
+
+  }.bind(this); // pass in video
   this.searchResults = function(results) {
     //do something
-  }
+  };
 })
 
 .directive('app', function() {
   return {
     scope: {},
-    restrict: 'E',
+    // restrict: 'E',
     controller: 'AppController',
     controllerAs: 'ctrl',
     bindToController: true,
