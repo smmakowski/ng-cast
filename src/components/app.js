@@ -1,6 +1,6 @@
 angular.module('video-player', [])
 
-.controller('AppController', function($scope) {
+.controller('AppController', function() {
   this.videos = window.exampleVideoData; // this is array
   this.currentVideo = window.exampleVideoData[0];
   console.log(this.currentVideo, 'tryyyy');
@@ -10,11 +10,16 @@ angular.module('video-player', [])
     this.currentVideo = video;
     console.log(this);
     console.log(this.currentVideo, '!!!!!');
-
   }.bind(this); // pass in video
+
   this.searchResults = function(results) {
-    //do something
+    //results from YouTube API
   };
+
+  // this.getSearchBarInput = function(query) {
+  //   console.log(query)
+  // };
+
 })
 
 .directive('app', function() {
