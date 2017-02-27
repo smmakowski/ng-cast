@@ -1,21 +1,19 @@
 angular.module('video-player')
 
 .controller('searchController', function(youTube) {
+
   this.getSearchBarQuery = function(query) {
     query = query || '';
 
-    youTube.search('dog meat', function(data) {
-      console.log(data);
-    });
+    youTube.search(query, this.result);
   };
-
 })
 
 .directive('search', function() {
   return {
     scope: {
-      service: '<',
-      result: '<'
+      result: '<',
+      videos: '<'
     },
     restrict: 'E',
     controller: 'searchController',
