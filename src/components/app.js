@@ -1,31 +1,27 @@
-angular.module('video-player', [])
+angular.module('video-player')
 
-.controller('AppController', function() {
+.controller('AppController', function($window, youTube) {
+  this.searchService = youTube;
   this.videos = window.exampleVideoData; // this is array
   this.currentVideo = window.exampleVideoData[0];
-  console.log(this.currentVideo, 'tryyyy');
 
   this.selectVideo = function(video) {
-    console.log(this);
     this.currentVideo = video;
-    console.log(this);
-    console.log(this.currentVideo, '!!!!!');
   }.bind(this); // pass in video
 
   this.searchResults = function(results) {
-    //results from YouTube API
-  };
+    this.videos = results
+    this.currentVideo = this.videos[0];
+  }.bind(this);
 
-  // this.getSearchBarInput = function(query) {
-  //   console.log(query)
-  // };
+  youTube.search('sparky wheres satan', this.searchResults);
 
 })
 
 .directive('app', function() {
   return {
     scope: {},
-    // restrict: 'E',
+    restrict: 'E',
     controller: 'AppController',
     controllerAs: 'ctrl',
     bindToController: true,
