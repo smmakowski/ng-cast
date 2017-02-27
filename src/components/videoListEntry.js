@@ -8,8 +8,8 @@ angular.module('video-player')
     // restrict: 'E',
     controllerAs: 'ctrl',
     bindToController: true,
-    controller: function($scope) {
-      console.log($scope);
+    controller: function() {
+      // nothing
     },
     templateUrl: 'src/templates/videoListEntry.html'
   };

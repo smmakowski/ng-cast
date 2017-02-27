@@ -5,7 +5,7 @@ angular.module('video-player')
     $http.get('https://www.googleapis.com/youtube/v3/search', {
       params: {
         part: 'snippet',
-        q: 'sparky wheres satan',
+        q: query,
         type: 'video',
         maxResults: 5,
         key: 'AIzaSyAv2El96rUXNt4jR6--90AMgHyKoLkMniY',

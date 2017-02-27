@@ -1,7 +1,7 @@
 <div class="search-bar form-inline">
-  <input class="form-control" type="text" ng-model="ctrl.text"/>
+  <input class="form-control" type="text" ng-model="text"/>
   <button class="btn"
-  ng-click="ctrl.getSearchBarQuery()"
+  ng-click="ctrl.getSearchBarQuery(text)"
   >
     <span class="glyphicon glyphicon-search"></span>
   </button>

@@ -14,7 +14,7 @@ angular.module('video-player')
     this.currentVideo = this.videos[0];
   }.bind(this);
 
-  youTube.search('sparky wheres satan', this.searchResults);
+  youTube.search('dr. hosico', this.searchResults);
 
 })
 
